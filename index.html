@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            align-items: center;
+            height: 100vh;
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+        img,div {
+            height: 100vh;
+            width: 100%;
+            max-width: 900px;
+            position: absolute;
+            transition: z-index 0.5s ease;
+        }
+        #img01 {
+            z-index: 2;
+        }
+        #img02 {
+            z-index: 0;
+        }
+        #img03{
+            z-index: 1;
+            height: 15%;
+            bottom: 10%;
+            width: 20%;
+            left: 40%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img id="img03" src="https://drive.google.com/uc?export=download&id=1pAUMS_UHmtHHhsv6zvQnblB-o9Mey2v6" alt="">
+    </div>
+    <img id="img01" src="https://drive.google.com/uc?export=download&id=115qjV6rSJXL_Fslt9BXjTQcExRIqDbjH" alt="imagem">
+    <img id="img02" src="https://drive.google.com/uc?export=download&id=1MeEf6USdxyfpDUAZiQjrrHYSm8WuDKTZ" alt="imagem02">
+    <script>
+        setTimeout(function() {
+            var img02 = document.getElementById("img02");
+            img02.style.zIndex = 3;
+            var img03 = document.getElementById("img03");
+            img03.style.zIndex = 4;
+        }, 5000);
+    </script>
+    <audio id="audio" src="https://drive.google.com/uc?export=download&id=12VyB-8r8b2tDRL-4tYpYJbH4cDa06pKx"></audio>
+
+    <script>
+      // Obtém referências para a imagem e o elemento de áudio
+      var imagemClicavel = document.getElementById('img03');
+      var audio = document.getElementById('audio');
+    
+      // Adiciona um ouvinte de eventos para o clique na imagem
+      imagemClicavel.addEventListener('click', function() {
+        // Verifica se o áudio está reproduzindo e o pausa, ou inicia a reprodução se estiver pausado
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+          audio.currentTime = 0; // Reinicia o áudio para o início
+        }
+      });
+    </script>
+</body>
+</html>

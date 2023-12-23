@@ -27,6 +27,7 @@
         }
         #img02 {
             z-index: 0;
+            display:none;
         }
         #img03{
             z-index: 1;
@@ -34,6 +35,7 @@
             bottom: 10%;
             width: 20%;
             left: 40%;
+            display:none;
         }
     </style>
 </head>
@@ -47,8 +49,10 @@
         setTimeout(function() {
             var img02 = document.getElementById("img02");
             img02.style.zIndex = 3;
+            img02.style.display = "block";
             var img03 = document.getElementById("img03");
             img03.style.zIndex = 4;
+            img03.style.display = "block";
         }, 5000);
     </script>
     <audio id="audio" src="https://drive.google.com/uc?export=download&id=12VyB-8r8b2tDRL-4tYpYJbH4cDa06pKx"></audio>
